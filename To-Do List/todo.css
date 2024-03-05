@@ -1,0 +1,157 @@
+body {
+    font-family: Didot, sans-serif;
+    font-weight: bold;
+    margin: 5;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav {
+    font-size: 120%;
+    width: 100%;
+    background-color: #F2F2F2;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 2;
+    margin: 2;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+h2 {
+    font-family: Didot, sans-serif;
+    font-size: 120%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#addTaskForm {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+input[type="submit"] {
+    font-family: Didot, sans-serif;
+    font-size: 100%;
+    padding: 10px 10px;
+    background-color: #033649;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+/* Relative column widths */
+th:nth-child(1),
+td:nth-child(1) {
+    width: 5%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 35%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 15%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 15%;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+    width: 30%;
+}
+
+.priority {
+    border-radius: 5px;
+    padding: 3px 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.priority.high {
+    background-color: #FE4365;
+}
+
+.priority.medium {
+    background-color: #F9CDAD;
+}
+
+.priority.low {
+    background-color: #83AF9B;
+}
+
+select {
+    font-size: 100%;
+}
+
+#addTaskForm input[type="text"] {
+    font-size: 80%;
+}
+
+#deadline {
+    font-size: 80%;
+    margin-bottom: 40px;
+}

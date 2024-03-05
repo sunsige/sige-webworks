@@ -1,0 +1,109 @@
+<!-- Expected display as follows
+
+Header: TO-DO LIST
+Sub-header: Today's Date
+Navigation bar: Add Tasks, Uncompleted Tasks, Completed Tasks, All Tasks 
+    where Uncompleted and Completed Tasks are displayed on the same page.
+Add Tasks:
+    If task does not exist and less than 10 oustanding tasks, add
+    If task is repeated, display error message
+    If 10 outstanding tasks, display error message
+Uncompleted Tasks:
+    Check the box once completed, moved to Completed Tasks.
+Completed Tasks:
+    Displays with Date of Completion. Should remain even after refreshing the page. -->
+
+<html>
+
+<head>
+    <title>The List that never ends</title>
+    <link rel="stylesheet" href="todo.css">
+    <script src="todo.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">TO-DO LIST</h1>
+        <p id="todaysDate">Today's Date: </p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#addTaskSection">Add Task</a></li>
+            <li><a href="#TasksSection">Uncompleted Tasks</a></li>
+            <li><a href="#TasksSection">Completed Tasks</a></li>
+            <li><a href="#allTasksSection">All Tasks</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="addTaskSection">
+            <h2>Add Task</h2>
+            <form id="addTaskForm">
+                <label for="taskDescription">Task Description:</label><br>
+                <input type="text" id="taskDescription" name="taskDescription"><br>
+                <label for="priority">Priority:</label><br>
+                <select id="priority" name="priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select><br>
+                <label for="deadline">Deadline:</label><br>
+                <input type="date" id="deadline" name="deadline" value="">
+                <input type="submit" value="Add Task">
+            </form>
+        </section>
+
+        <section id="TasksSection">
+            <h2>Uncompleted Tasks</h2>
+            <table id="uncompletedTasksTable">
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Task Description</th>
+                        <th>Priority</th>
+                        <th>Deadline</th>
+                        <th>Completed?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Tasks here -->
+                </tbody>
+            </table>
+            <h2>Completed Tasks</h2>
+            <table id="completedTasksTable">
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Task Description</th>
+                        <th>Priority</th>
+                        <th>Deadline</th>
+                        <th>Date of Completion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Completed tasks here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="allTasksSection" style="display:none;">
+            <h2>All Tasks</h2>
+            <table id="allTasksTable">
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Task Description</th>
+                        <th>Priority</th>
+                        <th>Deadline</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- All tasks here -->
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+</body>
+</html>
